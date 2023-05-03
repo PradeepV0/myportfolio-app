@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { AiFillMessage } from "react-icons/ai";
+import {AiTwotonePhone } from "react-icons/ai";
 import { IoMdSend } from "react-icons/io";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -54,7 +54,7 @@ function Contactpage() {
   };
   // -------------------------------
   return (
-    <>
+    <div className="contact">
       <div className="contactbackground">
         {/* -------------------------- */}
         <div className="col-md-12">
@@ -98,7 +98,7 @@ function Contactpage() {
               <div className="contact-form">
                 {/* -------------------------- */}
                 <h2 className="contact-me">
-                  Contact Me <AiFillMessage className="contact-icon" />
+                  Contact Me <AiTwotonePhone className="contact-icon" />
                 </h2>
                 {/* -------------------------- */}
                 <form ref={form} onSubmit={sendEmail} className="contact">
@@ -185,7 +185,7 @@ function Contactpage() {
         {/* -------------------------- */}
       </div>
       {/* -------------------------- */}
-    </>
+    </div>
   );
 }
 

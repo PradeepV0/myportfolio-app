@@ -6,7 +6,7 @@ function Project() {
   return (
     <div>
       <Header />
-      <Projectlist />
+      {/* <Projectlist /> */}
     </div>
   )
 }
