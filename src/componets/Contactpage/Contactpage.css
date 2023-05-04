@@ -1,8 +1,7 @@
 .contactbackground{
   width: 100%;
   height: 100vh;
-  /* background-image: url("../../Images/MERN.jpg"); */
-  background-color: #20e6a0;
+  background-image: url("../../Images/MERN.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
