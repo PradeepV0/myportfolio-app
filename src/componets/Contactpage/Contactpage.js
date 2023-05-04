@@ -154,10 +154,10 @@ function Contactpage() {
         <div className="row socil-media">
         <div className="col-md-12">
               <ul>
-                <li><a><AiOutlineInstagram className="insta-icon"/></a></li>
-                <li><a><AiFillLinkedin className="linkedin-icon"/></a></li>
-                <li><a><AiOutlineGithub className="git-icon" /></a></li>
-                <li><a><AiOutlineWhatsApp className="whatsapp-icon"/></a></li>
+                <li><a href="#"><AiOutlineInstagram className="insta-icon"/></a></li>
+                <li><a href="#"><AiFillLinkedin className="linkedin-icon"/></a></li>
+                <li><a href="#"><AiOutlineGithub className="git-icon" /></a></li>
+                <li><a href="#"><AiOutlineWhatsApp className="whatsapp-icon"/></a></li>
               </ul>
             </div>
         </div>
