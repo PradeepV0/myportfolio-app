@@ -2,7 +2,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
-import Project from "./Pages/Projects";
+// import Project from "./Pages/Projects";
 import Contact from "./Pages/Contact";
 import Skills from "./Pages/Skills";
 import { Routes, Route, BrowserRouter } from "react-router-dom";

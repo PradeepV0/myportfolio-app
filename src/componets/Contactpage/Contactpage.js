@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import "./Contactpage.css";
-import { Container } from "react-bootstrap";
-import { IoLogoWhatsapp } from "react-icons/io";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import {AiFillLinkedin, AiOutlineGithub, AiOutlineInstagram, AiOutlineWhatsApp, AiTwotonePhone } from "react-icons/ai";
 import { IoMdSend } from "react-icons/io";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Contactpage() {
   // -------------------------------
@@ -30,6 +28,7 @@ function Contactpage() {
   // -------------------------------
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoader(false);
     emailjs
       .sendForm(
         "service_5ckpq99",
