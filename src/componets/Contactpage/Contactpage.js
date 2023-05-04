@@ -4,10 +4,11 @@ import { Container } from "react-bootstrap";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import {AiTwotonePhone } from "react-icons/ai";
+import {AiFillLinkedin, AiOutlineGithub, AiOutlineInstagram, AiOutlineWhatsApp, AiTwotonePhone } from "react-icons/ai";
 import { IoMdSend } from "react-icons/io";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Contactpage() {
   // -------------------------------
@@ -29,71 +30,37 @@ function Contactpage() {
   // -------------------------------
   const sendEmail = (e) => {
     e.preventDefault();
-    setLoader(false);
     emailjs
       .sendForm(
-        `${process.env.REACT_APP_SERVICE_ID}`,
-        `${process.env.REACT_APP_TEMPLATE_ID}`,
+        "service_5ckpq99",
+        "template_p6bqd8g",
         form.current,
-        `${process.env.REACT_APP_PUBLIC_KEY}`
+        "Cnl8sDK-kyPc10Tr8"
       )
       .then(
-        (result) => {
-          console.log(result.text);
-          console.log("message sent");
-          form.current.reset();
-          setLoader(true);
-          if (result.text) {
-            success();
-          }
+        () => {
+          alert("You email Successfulyy sent");
+          window.location.reload(false);
         },
-        (error) => {
-          console.log(error.text);
+        () => {
+          alert("Error While sending and Email");
         }
       );
   };
   // -------------------------------
   return (
-    <div className="contact">
-      <div className="contactbackground">
+    <div className="contactbackground">
+      <div className="Contact">
         {/* -------------------------- */}
-        <div className="col-md-12">
+        
           {/* -------------------------- */}
           <div className="row contact-row">
+          <div className="col-md-12 ">
             {/* -------------------------- */}
-            <div className="col-md-6 get-in-touch">
-              {/* -------------------------- */}
-              <Container className="contact-container">
-                <h2 className="contacthead">Get In Touch</h2>
-                {/* -------------------------- */}
-                <div className="col-md-7 get-div">
-                  {/* -------------------------- */}
-                  <p className="contactpara">
-                    Thank you for taking the time to visit my portfolio. I am a
-                    MERN stack developer currently seeking new opportunities to
-                    grow and develop my skills in web development. If you are
-                    looking for a skilled and passionate developer to join your
-                    team, I would love to hear from you or just want to chat
-                    about web development, please feel free to reach out to me.
-                  </p>
-                  {/* -------------------------- */}
-                  <button
-                    className="contactbtn"
-                    onClick={() => {
-                      window.open(`${process.env.REACT_APP_WHATSAPP}`);
-                    }}
-                  >
-                    Say Hello
-                    <IoLogoWhatsapp className="watsapp-icon" />{" "}
-                  </button>
-                  {/* -------------------------- */}
-                </div>
-                {/* -------------------------- */}
-              </Container>
-              {/* -------------------------- */}
-            </div>
+         
+          
             {/* -------------------------- */}
-            <div className="col-md-6 input-form">
+            <div className="input-form">
               {/* -------------------------- */}
               <div className="contact-form">
                 {/* -------------------------- */}
@@ -106,7 +73,7 @@ function Contactpage() {
                   <div className="input-div">
                     {/* -------------------------- */}
                     <div>
-                      <label className="input-label">Name</label>
+                      <label className="input-label"><span>Name</span></label>
                       <br></br>
                       <input
                         type="text"
@@ -172,19 +139,30 @@ function Contactpage() {
               </div>
               {/* -------------------------- */}
             </div>
+            
+           
             {/* -------------------------- */}
-            <p className="copyright">
-              © Copyright 2023.
-              <br />
-              Designed & Built by - <span>Pradeep V</span>
-            </p>
+         
             {/* -------------------------- */}
           </div>
           {/* -------------------------- */}
         </div>
+        <div className="row socil-media">
+        <div className="col-md-12">
+              <ul>
+                <li><a><AiOutlineInstagram className="insta-icon"/></a></li>
+                <li><a><AiFillLinkedin className="linkedin-icon"/></a></li>
+                <li><a><AiOutlineGithub className="git-icon" /></a></li>
+                <li><a><AiOutlineWhatsApp className="whatsapp-icon"/></a></li>
+              </ul>
+            </div>
+        </div>
         {/* -------------------------- */}
       </div>
       {/* -------------------------- */}
+      <p className="copyright">
+      © PRADEEP V. All right reserved
+            </p>
     </div>
   );
 }

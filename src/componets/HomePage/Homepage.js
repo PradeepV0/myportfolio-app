@@ -2,8 +2,8 @@ import React from "react";
 import "./Homepage.css";
 import { Container, Row, Col } from "react-bootstrap";
 import Text from "./Text";
-import { AiFillGithub } from "react-icons/ai";
-import { GrMail } from "react-icons/gr";
+import { AiFillFileExclamation, AiFillGithub } from "react-icons/ai";
+import { Button } from "react-bootstrap";
 import { FaLinkedinIn } from "react-icons/fa";
 function Home() {
   return (
@@ -26,7 +26,7 @@ function Home() {
             {/* ----------------------------- */}
             <button
               onClick={() => {
-                window.open(`${process.env.REACT_APP_GITHUB}`);
+                window.open(`${"https://github.com/PradeepV0"}`);
               }}
               className="socailmediabtn"
             >
@@ -35,18 +35,30 @@ function Home() {
             {/* ----------------------------- */}
             <button
               onClick={() => {
-                window.open(`${process.env.REACT_APP_LINKED_IN}`);
+                window.open(`${"https://www.linkedin.com/in/pradeep-venkateshwaran-a0a559147"}`);;
               }}
               className="socailmediabtn"
             >
               <FaLinkedinIn className="icon-linkedin" />
             </button>
+            <Button
+            onClick={() => {
+              window.open(`${"https://docs.google.com/document/d/1145bCsgYb9nzweglBwLmPd7dG23-p3YK/edit?usp=share_link&ouid=109591783048695661057&rtpof=true&sd=true"}`);
+            }}
+            className="resumebtn"
+          >
+            {/* <span className="resume-title">Resume</span>{" "} */}
+            {/* <a href="https://docs.google.com/document/d/1145bCsgYb9nzweglBwLmPd7dG23-p3YK/edit?usp=share_link&ouid=109591783048695661057&rtpof=true&sd=true"
+          target="_blank"
+          rel="noopener noreferrer" 
+          > */}
+            <span className="resume-title"> Resume</span>
+            <AiFillFileExclamation  />
+          
+            
+          </Button>
             {/* ----------------------------- */}
-            <button className="socailmediabtn">
-              <a href={`${process.env.REACT_APP_MAIL}`}>
-                <GrMail className="icon-mail" />
-              </a>
-            </button>
+          
           </Col>
           {/* ----------------------------- */}
           <Col md={5}>
