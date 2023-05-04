@@ -37,12 +37,17 @@ function Contactpage() {
         "Cnl8sDK-kyPc10Tr8"
       )
       .then(
-        () => {
-          alert("You email Successfulyy sent");
-          window.location.reload(false);
+        (result) => {
+          console.log(result.text);
+          console.log("message sent");
+          form.current.reset();
+          setLoader(true);
+          if (result.text) {
+            success();
+          }
         },
-        () => {
-          alert("Error While sending and Email");
+        (error) => {
+          console.log(error.text);
         }
       );
   };
