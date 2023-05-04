@@ -154,10 +154,10 @@ function Contactpage() {
         <div className="row socil-media">
         <div className="col-md-12">
               <ul>
-                <li><a href="#"><AiOutlineInstagram className="insta-icon"/></a></li>
-                <li><a href="#"><AiFillLinkedin className="linkedin-icon"/></a></li>
-                <li><a href="#"><AiOutlineGithub className="git-icon" /></a></li>
-                <li><a href="#"><AiOutlineWhatsApp className="whatsapp-icon"/></a></li>
+                <li><a href="https://www.linkedin.com/in/pradeep-venkateshwaran-a0a559147" target="_blank"><AiOutlineInstagram className="insta-icon"/></a></li>
+                <li><a href="https://www.linkedin.com/in/pradeep-venkateshwaran-a0a559147" target="_blank"><AiFillLinkedin className="linkedin-icon"/></a></li>
+                <li><a href="https://www.linkedin.com/in/pradeep-venkateshwaran-a0a559147" target="_blank"><AiOutlineGithub className="git-icon" /></a></li>
+                <li><a href="https://www.linkedin.com/in/pradeep-venkateshwaran-a0a559147" target="_blank"><AiOutlineWhatsApp className="whatsapp-icon"/></a></li>
               </ul>
             </div>
         </div>
